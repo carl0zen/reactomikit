@@ -71,7 +71,7 @@ export const Code = styled.code`
 export const Headline = styled.div`
   font-family: Helvetica Neue;
   font-weight: 100;
-  font-size: 1em;
+  font-size: 1.3em;
   padding: 1em 0;
 `;
 

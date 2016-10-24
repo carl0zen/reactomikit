@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import domready from 'domready';
+<<<<<<< HEAD
+=======
+import RedBox from 'redbox-react';
+>>>>>>> master
 
 // Note: `RouterContainer`-module is required inline
 
@@ -15,6 +19,10 @@ class App {
   constructor() {
     this.renderApp = this.renderApp.bind(this);
     this.hotReRender = this.hotReRender.bind(this);
+<<<<<<< HEAD
+=======
+    this.renderError = this.renderError.bind(this);
+>>>>>>> master
     this.rootElement = null;
 
     // Only proceed with rendering if we're not using a test-framework
@@ -49,7 +57,23 @@ class App {
   // Re-render after hot-reloading a module,
   // display error if something during the compilation goes wrong.
   hotReRender() {
+<<<<<<< HEAD
     this.renderApp();
+=======
+    try {
+      this.renderApp();
+    } catch (error) {
+      this.renderError(error);
+    }
+  }
+
+  // Risplay an overlay for runtime errors
+  renderError(error) {
+    ReactDOM.render(
+      <RedBox error={error} />,
+      this.rootElement
+    );
+>>>>>>> master
   }
 }
 

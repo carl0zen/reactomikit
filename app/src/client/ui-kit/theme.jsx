@@ -23,7 +23,7 @@ const theme = {
     'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol'`,
-    base: '15px',
+    base: '13px',
     small: '11px',
     xsmall: '9px',
     large: '20px',

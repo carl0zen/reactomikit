@@ -8,7 +8,6 @@
   ],
   "parser": "babel-eslint",
   "rules": {
-    "no-confusing-arrow": "off",
     "no-multiple-empty-lines": [
       "error",
       {
