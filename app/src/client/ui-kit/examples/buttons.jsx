@@ -9,20 +9,24 @@ const ContentExample = () => (
     <Title>Buttons</Title>
     <Padder>
       <Inline>
-        <Code>{ '<Button>Normal Button</Button>' }</Code>
-        <Button>Normal Button</Button>
+        <Inline>
+          <Code>{ '<Button>Normal Button</Button>' }</Code>
+          <Button>Normal Button</Button>
+        </Inline>
+        <Inline>
+          <Code>{'<Button primary>Primary Button</Button>'}</Code>
+          <Button primary>Primary Button</Button>
+        </Inline>
       </Inline>
       <Inline>
-        <Code>{'<Button primary>Primary Button</Button>'}</Code>
-        <Button primary>Primary Button</Button>
-      </Inline>
-      <Inline>
-        <Code>{'<Button disabled>Disabled Button</Button>'}</Code>
-        <Button disabled primary>Disabled Button</Button>
-      </Inline>
-      <Inline>
-        <Code>{'<Button disabled primary>Disabled Button</Button>'}</Code>
-        <Button disabled>Disabled Button</Button>
+        <Inline>
+          <Code>{'<Button disabled>Disabled Button</Button>'}</Code>
+          <Button disabled primary>Disabled Button</Button>
+        </Inline>
+        <Inline>
+          <Code>{'<Button disabled primary>Disabled Button</Button>'}</Code>
+          <Button disabled>Disabled Button</Button>
+        </Inline>
       </Inline>
     </Padder>
   </Panel>

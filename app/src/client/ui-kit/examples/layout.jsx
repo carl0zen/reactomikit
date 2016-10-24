@@ -3,9 +3,9 @@ import { Padder, Inline } from '../helpers';
 import { Panel, ScrollView } from '../layout';
 import { Title, Code, H2, P } from '../typography';
 
-const ContentExample = () => (
+const LayoutExample = () => (
   <Panel>
-    <Title>Content</Title>
+    <Title>Layout</Title>
     <Padder>
       <H2>ScrollView</H2>
       <Inline>
@@ -78,9 +78,8 @@ const ContentExample = () => (
           </P>
         </ScrollView>
       </Inline>
-      <H2>Code</H2>
     </Padder>
   </Panel>
 );
 
-export default ContentExample;
+export default LayoutExample;

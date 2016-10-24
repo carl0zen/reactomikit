@@ -6,7 +6,7 @@ import FormExample from './examples/form';
 import TopbarExample from './examples/topbar';
 import TypographyExample from './examples/typography';
 import MainExample from './examples/main';
-import ContentExample from './examples/content';
+import LayoutExample from './examples/layout';
 import ButtonsExample from './examples/buttons';
 
 const displayName = 'UI Kit';
@@ -20,7 +20,7 @@ const UIKit = () => (
       <MainExample />
       <TypographyExample />
       <FormExample />
-      <ContentExample />
+      <LayoutExample />
       <ButtonsExample />
     </View>
   </div>
