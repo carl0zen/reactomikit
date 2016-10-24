@@ -73,6 +73,7 @@ export const Headline = styled.div`
   font-weight: 100;
   font-size: 1.3em;
   padding: 1em 0;
+  max-width: 1100px;
 `;
 
 export const Footnote = styled.small`
