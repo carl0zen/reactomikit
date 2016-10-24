@@ -9,7 +9,7 @@ const MainExample = () => (
   <Viewport>
     <img role="presentation" src={logo} />
     <Headline>
-      Themable, Native, Atomic, Reusable, Crossplatform and easily extensible UI-Toolkit
+      Themable, Native, Atomic, Reusable, Universal and easily extensible UI-Toolkit
     </Headline>
     <Powered>
       powered by React and <Link target="_blank" href="https://github.com/styled-components/styled-components">styled-components</Link>
