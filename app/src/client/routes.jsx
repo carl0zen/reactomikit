@@ -1,8 +1,9 @@
 import React from 'react';
+
 import { Route, IndexRoute } from 'react-router';
 
 import Shell from './views/Shell';
-import Home from './views/features/Home';
+import UIKit from './ui-kit';
 
 // `routes.js`
 // -----------
@@ -17,8 +18,6 @@ import Home from './views/features/Home';
 // Use Shell as surrounding container for all routes
 export default (
   <Route path="/" component={Shell}>
-
-    {/* A view for the home page */}
-    <IndexRoute component={Home} />
+    <IndexRoute component={UIKit} />
   </Route>
 );

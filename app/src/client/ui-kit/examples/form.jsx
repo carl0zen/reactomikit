@@ -6,7 +6,7 @@ import { Padder, Inline } from '../helpers';
 
 const FormExample = () => (
   <Panel>
-    <Title dark>Form</Title>
+    <Title>Form</Title>
     <Padder>
       <H2>Inputs</H2>
       <Inline>
@@ -24,8 +24,15 @@ const FormExample = () => (
       <H2>TextArea</H2>
       <Inline>
         <Textarea placeholder="Type your text" />
+        <Code>{ '<Textarea placeholder="Type your text" />' }</Code>
+      </Inline>
+      <Inline>
         <Textarea error placeholder="Type your text" />
+        <Code>{ '<Textarea error placeholder="Type your text" />' }</Code>
+      </Inline>
+      <Inline>
         <Textarea disabled placeholder="Type your text" />
+        <Code>{ '<Textarea disabled placeholder="Type your text" />' }</Code>
       </Inline>
     </Padder>
   </Panel>

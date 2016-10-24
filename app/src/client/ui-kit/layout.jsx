@@ -48,6 +48,7 @@ export const View = styled(ScrollView)`
   right: 0;
   left: 0;
   bottom: 0;
+  font-size: ${font.base};
 `;
 
 export const Viewport = styled.section`

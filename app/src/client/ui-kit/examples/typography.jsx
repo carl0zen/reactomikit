@@ -7,7 +7,7 @@ import { Link } from '../base';
 
 const TypographyExample = () => (
   <Panel>
-    <Title dark>Typography</Title>
+    <Title>Typography</Title>
     <Padder>
       <Inline>
         <H1> Heading h1 </H1>

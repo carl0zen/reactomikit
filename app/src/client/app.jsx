@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import domready from 'domready';
 import RedBox from 'redbox-react';
-
 // Note: `RouterContainer`-module is required inline
 
 // `app.js`

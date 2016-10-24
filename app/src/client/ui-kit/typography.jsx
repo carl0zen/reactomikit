@@ -40,7 +40,7 @@ export const P = styled.p`
 `;
 
 export const Title = styled(Inline)`
-  background-color: ${props => props.dark ? color.black : color.primary};
+  background-color: ${props => props.dark ? color.black : color.secondary};
   color: ${color.white};
   align-items: center;
   justify-content: flex-start;
@@ -73,6 +73,7 @@ export const Headline = styled.div`
   font-weight: 100;
   font-size: 1.3em;
   padding: 1em 0;
+  max-width: 1100px;
 `;
 
 export const Footnote = styled.small`

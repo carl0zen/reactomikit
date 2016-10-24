@@ -13,7 +13,6 @@ const propTypes = {
 
 const component = (props) => (
   <div>
-    {'Shell'}
     {props.children}
   </div>
 );

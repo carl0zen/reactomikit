@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from './theme';
 
-const { color, font, nav, menu } = theme;
+const { color, font, nav, menu, transition } = theme;
 
 export const Menu = styled.nav`
   line-height: ${nav.height};
@@ -17,9 +17,9 @@ export const Menu = styled.nav`
     font-size: ${font.small};
     font-weight: 600;
     transition:
-      background-color ${theme.transition},
-      padding ${theme.transition},
-      border ${theme.transition};
+      background-color ${transition},
+      padding ${transition},
+      border ${transition};
 
     &:hover {
       background-color: ${color.secondary};
@@ -43,22 +43,37 @@ export const Button = styled.button`
   font-weight: 700;
   outline: none;
   position: relative;
-  transition: all 0.3s;
+  transition:
+    background-color ${transition},
+    opacity ${transition};
   text-transform: uppercase;
   padding: 10px 20px;
   margin: 0;
   border-radius: 3px;
   text-align: center;
-  background-color: ${props => props.primary ? color.primary : color.info};
+  background-color: ${color.info};
+  ${props => props.primary && `background-color: ${color.primary};`}
+  ${props => props.disabled && `
+    background-color : ${color.border};
+    opacity: 0.4;
+    pointer-events: none;
+    `
+  }
   color: ${color.white};
-  border-color: ${color.border};
 
   &:hover,
   &:focus {
-    border-color: ${props => props.primary ? color.primary : color.info};
-    color: ${props => props.primary ? color.white : color.info};
-    background-color: ${props => props.primary ? color.info : color.info};
-}
+    border: 1px solid ${color.info};
+    color: ${color.info};
+    background-color: ${color.white};
+
+    ${props => props.primary && `
+      border-color: ${color.primary};
+      background-color: ${color.white};
+      color: ${color.primary};
+      `
+    }
+  }
 `;
 
 export const Link = styled.a`
