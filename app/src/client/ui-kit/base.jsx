@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import theme from './theme';
 
-const { color, font, nav, menu, transition } = theme;
+const { color, font, nav, menu, transition, button } = theme;
 
 export const Menu = styled.nav`
   line-height: ${nav.height};
@@ -32,10 +32,9 @@ export const Menu = styled.nav`
 `;
 
 export const Button = styled.button`
-  border: 1px solid;
+  border: 1px solid white;
   font-family: inherit;
   font-size: 12px;
-  color: inherit;
   cursor: pointer;
   display: inline-block;
   text-transform: uppercase;
@@ -43,6 +42,7 @@ export const Button = styled.button`
   font-weight: 700;
   outline: none;
   position: relative;
+
   transition:
     background-color ${transition},
     opacity ${transition};
@@ -52,14 +52,18 @@ export const Button = styled.button`
   border-radius: 3px;
   text-align: center;
   background-color: ${color.info};
-  ${props => props.primary && `background-color: ${color.primary};`}
-  ${props => props.disabled && `
-    background-color : ${color.border};
-    opacity: 0.4;
-    pointer-events: none;
-    `
-  }
   color: ${color.white};
+
+  ${props => props.primary && `
+    background-color: ${color.primary};
+  `}
+
+  ${props => props.disabled && `
+    color: ${color.base};
+    opacity: 0.4
+    background-color: ${color.white};
+    pointer-events: none;
+  `}
 
   &:hover,
   &:focus {
@@ -74,6 +78,16 @@ export const Button = styled.button`
       `
     }
   }
+
+  ${props => props.rounded && `
+    width: ${button.roundedSize};
+    height: ${button.roundedSize};
+    max-width: ${button.roundedSize};
+    min-width: ${button.roundedSize};
+    border-radius: 50%;
+    line-height: ${button.roundedSize};
+    padding: 0;
+  `}
 `;
 
 export const Link = styled.a`
@@ -81,7 +95,7 @@ export const Link = styled.a`
 
   &:hover {
     color: ${color.link};
-}
+  }
 `;
 
 export const Logo = styled.img`
