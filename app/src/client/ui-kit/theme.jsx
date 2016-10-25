@@ -42,6 +42,9 @@ const theme = {
   menu: {
     background: '#111',
   },
+  button: {
+    roundedSize: '40px',
+  },
 };
 
 export default theme;

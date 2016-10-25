@@ -8,14 +8,10 @@ export const Inline = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   > * {
     flex: 1
-    margin-right: 1em;
-
-    &:last-child {
-      margin-right: 0;
-    }
   }
 `;
 

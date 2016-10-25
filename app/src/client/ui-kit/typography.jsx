@@ -60,12 +60,13 @@ export const Code = styled.code`
   white-space: pre-wrap;
   background: rgba(103, 38, 92, 0.08);
   padding: 10px 20px;
-  margin-right: 16px;
+  margin: 0;
   border-radius: 3px;
   font-weight: 500;
   font-size: ${font.base};
   color: #A9A4A8;
   display: inline-block;
+  vertical-align: middle;
 `;
 
 export const Headline = styled.div`
