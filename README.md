@@ -1,6 +1,5 @@
 # reactomikit
-Atomic, Reusable, Crossplatform and Extensible minimal UI Kit built with React written in pure es6
-
+Minimal Atomic UI Toolkit for React
 Powered by styled-components
 ![image](http://g.recordit.co/YRZfWQzYMt.gif)
 
