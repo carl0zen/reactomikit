@@ -1,6 +1,8 @@
 # reactomikit
+
 Minimal Atomic UI Toolkit for React
-Powered by styled-components
+Powered by [styled-components](https://github.com/styled-components/styled-components)
+
 ![image](http://g.recordit.co/YRZfWQzYMt.gif)
 
 
