@@ -1,12 +1,10 @@
 import styled from 'styled-components';
 import theme from './theme';
-import { Padder } from './helpers';
 
 const { color, nav, font } = theme;
 
 export const Topbar = styled.header`
-  background: ${props => props.dark ? '#38383B' : nav.background};
-  color: ${props => props.dark ? '#FFF' : 'inherit'};
+  background: ${nav.background};
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -18,13 +16,16 @@ export const Topbar = styled.header`
   }
 `;
 
-export const Wrapper = styled(Padder)`
-  display: inline-block;
-  width: 100%;
-`;
-
 export const Panel = styled.article`
   background: white;
+  color: ${color.black};
+  font-size: ${font.base};
+  font-weight: 300;
+
+  ${props => props.dark && `
+    color: ${color.white};
+    background-color: ${color.black};
+  `}
 `;
 
 export const ScrollView = styled.section`
@@ -49,6 +50,10 @@ export const View = styled(ScrollView)`
   left: 0;
   bottom: 0;
   font-size: ${font.base};
+
+  ${props => props.bg && `
+    background-color: ${props.bg};
+  `}
 `;
 
 export const Viewport = styled.section`
@@ -63,4 +68,12 @@ export const Viewport = styled.section`
   font-size: 3em;
   background-color: ${color.black};
   color: ${color.white};
+`;
+
+export const App = styled.div`
+  margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
 `;

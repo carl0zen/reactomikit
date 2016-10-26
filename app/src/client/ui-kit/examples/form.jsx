@@ -1,8 +1,9 @@
 import React from 'react';
 import { Panel } from '../layout';
-import { Title, H2, Code } from '../typography';
+import { Title, H2 } from '../typography';
 import { Input, Textarea } from '../form';
 import { Padder, Inline } from '../helpers';
+import Code from '../components/code';
 
 const FormExample = () => (
   <Panel>

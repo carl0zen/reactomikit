@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { View } from './layout';
+import { View, App } from './layout';
 
 import FormExample from './examples/form';
 import TopbarExample from './examples/topbar';
@@ -14,7 +14,7 @@ const defaultProps = {};
 const propTypes = {};
 
 const UIKit = () => (
-  <div>
+  <App>
     <TopbarExample />
     <View>
       <MainExample />
@@ -23,7 +23,7 @@ const UIKit = () => (
       <LayoutExample />
       <ButtonsExample />
     </View>
-  </div>
+  </App>
 );
 
 UIKit.displayName = displayName;
