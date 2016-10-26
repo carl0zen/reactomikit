@@ -1,13 +1,13 @@
 import React from 'react';
 
-import { View, App } from './layout';
+import { View, App } from '../layout';
 
-import FormExample from './examples/form';
-import TopbarExample from './examples/topbar';
-import TypographyExample from './examples/typography';
-import MainExample from './examples/main';
-import LayoutExample from './examples/layout';
-import BaseExample from './examples/base';
+import FormExample from './form';
+import TopbarExample from './topbar';
+import TypographyExample from './typography';
+import MainExample from './main';
+import LayoutExample from './layout';
+import BaseExample from './base';
 
 const displayName = 'UI Kit';
 const defaultProps = {};
