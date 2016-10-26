@@ -1,8 +1,9 @@
 import React from 'react';
 import { Padder, Inline } from '../helpers';
 import { Panel } from '../layout';
-import { Title, Code, H2 } from '../typography';
+import { Title, H2 } from '../typography';
 import { Button } from '../base';
+import Code from '../components/code';
 
 const ContentExample = () => (
   <Panel>

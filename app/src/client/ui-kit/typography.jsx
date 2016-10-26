@@ -6,31 +6,36 @@ const { font, color, headings } = theme;
 
 export const headingsSharedProperties = `
   font-family: ${headings.family};
+  color: ${font.color};
+  margin: 0;
 `;
 
 export const H1 = styled.h1`
+  ${headingsSharedProperties}
   font-size: 3.5em;
   color: black;
   font-weight: 100;
-  ${headingsSharedProperties}
 `;
 
 export const H2 = styled.h2`
-  font-size: 2.5em;
-  font-weight: 300;
   ${headingsSharedProperties}
+  font-size: 2em;
+  margin: 20px 0;
+  font-weight: 400;
+  position: relative;
 `;
 
 export const H3 = styled.h3`
-  font-size: 2em;
-  font-weight: 400;
   ${headingsSharedProperties}
+  font-size: 1.8em;
+  line-height: 200%;
+  font-weight: 100;
 `;
 
 export const H4 = styled.h4`
+  ${headingsSharedProperties}
   font-size: 1.5em;
   font-weight: 500;
-  ${headings}
 `;
 
 export const P = styled.p`
