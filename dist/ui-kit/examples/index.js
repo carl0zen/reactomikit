@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', './layout', './examples/form', './examples/topbar', './examples/typography', './examples/main', './examples/layout', './examples/base'], factory);
+    define(['exports', 'react', '../layout', './form', './topbar', './typography', './main', './layout', './base'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('./layout'), require('./examples/form'), require('./examples/topbar'), require('./examples/typography'), require('./examples/main'), require('./examples/layout'), require('./examples/base'));
+    factory(exports, require('react'), require('../layout'), require('./form'), require('./topbar'), require('./typography'), require('./main'), require('./layout'), require('./base'));
   } else {
     var mod = {
       exports: {}
