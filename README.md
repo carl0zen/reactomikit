@@ -1,6 +1,6 @@
 # reactomikit
 
-Minimal Atomic UI Toolkit for React
+Minimal Atomic UI Toolkit for React and React Native
 Powered by [styled-components](https://github.com/styled-components/styled-components)
 
 ![image](http://g.recordit.co/YRZfWQzYMt.gif)
