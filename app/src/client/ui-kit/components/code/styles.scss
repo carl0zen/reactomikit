@@ -1,10 +1,13 @@
-
 :global {
   /*
   Date: 17.V.2011
   Author: pumbur <pumbur@pumbur.net>
   */
 
+  pre {
+    margin: 0;
+  }
+  
   .hljs {
     display: block;
     overflow-x: auto;

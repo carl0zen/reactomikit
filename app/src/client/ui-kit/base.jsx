@@ -101,3 +101,7 @@ export const Link = styled.a`
 export const Logo = styled.img`
   width: 130px;
 `;
+
+export const Label = styled.label`
+  background: red;
+`;

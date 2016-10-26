@@ -11,7 +11,7 @@ const propTypes = {
 
 const component = (props) => (
   <div className={styles.root}>
-    <Highlight lang="css">
+    <Highlight>
       {props.children}
     </Highlight>
   </div>

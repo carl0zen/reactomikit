@@ -71,9 +71,9 @@ export const Viewport = styled.section`
 `;
 
 export const App = styled.div`
-  margin: 0;
-
-  * {
+  *, & {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
   }
 `;
