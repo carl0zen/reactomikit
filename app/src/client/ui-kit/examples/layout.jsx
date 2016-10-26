@@ -20,19 +20,22 @@ const LayoutExample = () => (
         <Title>Custom Toolbar</Title>
       </Topbar>
       <Inline>
-        <Column>
-          <H3>JSX</H3>
-          <Code innerHTML className="html">
-            {
-    `<Topbar>
-      <Title>Custom Toolbar</Title>
-    </Topbar>
-    `
-            }
-          </Code>
-          <H3>Styled Component</H3>
-          <Code>
-            {
+        <Inline>
+          <Column>
+            <H3>JSX</H3>
+            <Code innerHTML className="html">
+              {
+`<Topbar>
+  <Title>Custom Toolbar</Title>
+</Topbar>
+`
+              }
+            </Code>
+          </Column>
+          <Column>
+            <H3>Styled Component</H3>
+            <Code>
+              {
 `export const Topbar = styled.header\`
   background: \${nav.background};
   display: flex;
@@ -45,46 +48,11 @@ const LayoutExample = () => (
     width: 230px;
   }
 \`;`
-            }
-          </Code>
-        </Column>
-        <Column>
-          <H3>HTML</H3>
-          <Code>
-            {
-`
-<div class="atom-top-bar">
-  <img src="logo/src" />
-  ...
-</div>
-`
-            }
-          </Code>
-          <H3>SCSS</H3>
-          <Code>
-            {
-    `
-    $nav-background: #000;
-    $nav-height: 70px;
-
-    .atom-top-bar {
-      background: $nav-background;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-      height: $nav-height;
-
-      img {
-        width: 230px;
-      }
-    }
-    `
-            }
-          </Code>
-        </Column>
+              }
+            </Code>
+          </Column>
+        </Inline>
       </Inline>
-      <H3>HTML</H3>
       <H2>Panel</H2>
       <Inline>
         <Panel>

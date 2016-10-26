@@ -7,7 +7,7 @@ import TopbarExample from './examples/topbar';
 import TypographyExample from './examples/typography';
 import MainExample from './examples/main';
 import LayoutExample from './examples/layout';
-import ButtonsExample from './examples/buttons';
+import BaseExample from './examples/base';
 
 const displayName = 'UI Kit';
 const defaultProps = {};
@@ -21,7 +21,7 @@ const UIKit = () => (
       <TypographyExample />
       <FormExample />
       <LayoutExample />
-      <ButtonsExample />
+      <BaseExample />
     </View>
   </App>
 );

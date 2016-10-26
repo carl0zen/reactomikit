@@ -15,13 +15,16 @@ export const Inline = styled.div`
   flex-wrap: wrap;
 
   > * {
-    flex: 1
+    flex: 1;
   }
 `;
 
 export const Column = styled(Inline)`
   flex-direction: column;
   justify-content: initial;
+  &:last-child {
+    margin: 0;
+  }
 
   h3 {
     flex-grow: 0;

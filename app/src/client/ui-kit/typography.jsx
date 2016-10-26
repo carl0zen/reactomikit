@@ -1,13 +1,12 @@
 import styled from 'styled-components';
 import theme from './theme';
-import { Inline } from './helpers';
 
 const { font, color, headings } = theme;
 
 export const headingsSharedProperties = `
   font-family: ${headings.family};
   color: ${font.color};
-  margin: 0;
+  line-height: 190%;
 `;
 
 export const H1 = styled.h1`
@@ -20,15 +19,16 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   ${headingsSharedProperties}
   font-size: 2em;
-  margin: 20px 0;
+  line-height: 2.5em;
   font-weight: 400;
   position: relative;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 `;
 
 export const H3 = styled.h3`
   ${headingsSharedProperties}
-  font-size: 1.8em;
-  line-height: 200%;
+  font-size: 1.5em;
   font-weight: 100;
 `;
 
@@ -44,7 +44,7 @@ export const P = styled.p`
   margin: 10px 0;
 `;
 
-export const Title = styled(Inline)`
+export const Title = styled.header`
   background-color: ${props => props.dark ? color.black : color.secondary};
   color: ${color.white};
   align-items: center;

@@ -2,14 +2,26 @@ import React from 'react';
 import { Padder, Inline } from '../helpers';
 import { Panel } from '../layout';
 import { Title, H2 } from '../typography';
-import { Button } from '../base';
+import { Menu, Button, Link, Logo, Label } from '../base';
 import Code from '../components/code';
 
-const ContentExample = () => (
+const BaseExample = () => (
   <Panel>
-    <Title>Buttons</Title>
+    <Title>Base</Title>
+    <Link />
+    <Logo />
+    <Label />
     <Padder>
-      <H2>Normal Button</H2>
+      <H2>Menu</H2>
+      <Menu>
+        <Link>Theme</Link>
+        <Link>Helpers</Link>
+        <Link>Layout</Link>
+        <Link>Typography</Link>
+        <Link>Buttons</Link>
+        <Link>Buttons</Link>
+      </Menu>
+      <H2>Classic Buttons</H2>
       <Inline>
         <Button>Normal Button</Button>
         <Button primary>Primary Button</Button>
@@ -20,7 +32,7 @@ const ContentExample = () => (
         <Code>{ '<Button primary>Primary Button</Button>' }</Code>
         <Code>{ '<Button disabled>Disabled Button</Button>' }</Code>
       </Inline>
-      <H2>Rounded Button</H2>
+      <H2>Rounded Buttons</H2>
       <Inline>
         <Inline>
           <Button rounded>B</Button>
@@ -39,4 +51,4 @@ const ContentExample = () => (
   </Panel>
 );
 
-export default ContentExample;
+export default BaseExample;
