@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', '../layout', '../typography', '../helpers', '../base', '../assets/logo.svg'], factory);
+    define(['exports', 'react', '../layout', '../typography', '../helpers', '../base', 'components/logo'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../layout'), require('../typography'), require('../helpers'), require('../base'), require('../assets/logo.svg'));
+    factory(exports, require('react'), require('../layout'), require('../typography'), require('../helpers'), require('../base'), require('components/logo'));
   } else {
     var mod = {
       exports: {}
@@ -31,7 +31,7 @@
     return _react2.default.createElement(
       _layout.Viewport,
       null,
-      _react2.default.createElement('img', { role: 'presentation', src: _logo2.default }),
+      _react2.default.createElement(_logo2.default, null),
       _react2.default.createElement(
         _typography.Headline,
         null,

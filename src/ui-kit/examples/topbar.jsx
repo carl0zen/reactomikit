@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Topbar } from '../layout';
-import { Menu, Link, Logo } from '../base';
-import logo from '../assets/logo.svg';
+import { Menu, Link } from '../base';
+import Logo from 'components/logo';
 
 const TopbarExample = () => (
   <Topbar>
-    <Logo src={logo} />
+    <Logo/>
     <Menu>
       <Link>Theme</Link>
       <Link>Helpers</Link>

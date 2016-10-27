@@ -1,8 +1,8 @@
 (function (global, factory) {
   if (typeof define === "function" && define.amd) {
-    define(['exports', 'react', '../layout', '../base', '../assets/logo.svg'], factory);
+    define(['exports', 'react', '../layout', '../base', 'components/logo'], factory);
   } else if (typeof exports !== "undefined") {
-    factory(exports, require('react'), require('../layout'), require('../base'), require('../assets/logo.svg'));
+    factory(exports, require('react'), require('../layout'), require('../base'), require('components/logo'));
   } else {
     var mod = {
       exports: {}
@@ -31,7 +31,7 @@
     return _react2.default.createElement(
       _layout.Topbar,
       null,
-      _react2.default.createElement(_base.Logo, { src: _logo2.default }),
+      _react2.default.createElement(_logo2.default, null),
       _react2.default.createElement(
         _base.Menu,
         null,
