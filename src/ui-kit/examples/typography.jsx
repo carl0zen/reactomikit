@@ -11,6 +11,12 @@ const TypographyExample = () => (
     <Title>Typography</Title>
     <Padder>
       <Inline>
+        <Title>Typography</Title>
+        <Code>
+          { '<Title>Typography</Title>' }
+        </Code>
+      </Inline>
+      <Inline>
         <H1> Heading h1 </H1>
         <Code>
           { '<H1>Heading h1</H1>' }

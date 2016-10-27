@@ -17,9 +17,8 @@ module.exports = {
   resolve: {
     alias: {
       "ui-kit": "reactomikit/dist/ui-kit"
-    },
-  extensions: ["", ".js", ".jsx", ".json", ".scss"]
-    },
+    }
+    ...
   },
   ...
 }
@@ -34,12 +33,14 @@ import UIKit from "ui-kit/examples";
 ```
 
 3. Use it anywhere in your app:
-```
+```jsx
 import { Button } from "ui-kit/button"
 
 const LoginButton = () => (
   <Button>Some button</Button>
-)
+);
+
+export default LoginButton
 ```
 
 ## Architecture
