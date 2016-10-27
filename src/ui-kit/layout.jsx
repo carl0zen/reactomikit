@@ -45,7 +45,7 @@ export const ScrollView = styled.section`
 
 export const View = styled(ScrollView)`
   position: absolute;
-  top: ${nav.height};
+  top: ${props => props.nobar ? 0 : nav.height};
   right: 0;
   left: 0;
   bottom: 0;
@@ -57,16 +57,17 @@ export const View = styled(ScrollView)`
 `;
 
 export const Viewport = styled.section`
-  font-family: Avenir Next;
   font-weight: 400;
-  height: 100vh;
+  flex: 1;
+  height: ${props => props.height ? props.height : '100%'};
+  width: ${props => props.width ? props.width : '100%'};
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   display: flex;
   font-size: 3em;
-  background-color: ${color.black};
+  background-color: ${props => props.bg ? props.bg : color.black};
   color: ${color.white};
 `;
 

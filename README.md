@@ -4,7 +4,43 @@ NOTE: This product is still under development, don't consider it near production
 
 Minimal Atomic UI Toolkit for React and React Native
 
-### In the quest for a minimal footprint multi-platform styling architecture
+In the quest for a minimal footprint multi-platform styling architecture
+
+
+## installation
+
+1. `npm i reactomikit -S`
+2. Expose UI kit in your webpack configuration
+```js
+module.exports = {
+  ...
+  resolve: {
+    alias: {
+      "ui-kit": "reactomikit/dist/ui-kit"
+    },
+  extensions: ["", ".js", ".jsx", ".json", ".scss"]
+    },
+  },
+  ...
+}
+```
+2. Create a new route to showcase your toolkit
+```jsx
+import UIKit from "ui-kit/examples";
+
+<Router>
+  <Route component={ UIKit } path="ui-kit" />  
+</Router>
+```
+
+3. Use it anywhere in your app:
+```
+import { Button } from "ui-kit/button"
+
+const LoginButton = () => (
+  <Button>Some button</Button>
+)
+```
 
 ## Architecture
 

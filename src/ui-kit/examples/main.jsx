@@ -3,11 +3,11 @@ import { Viewport } from '../layout';
 import { Headline, Powered, Footnote, Code } from '../typography';
 import { Center } from '../helpers';
 import { Link } from '../base';
-import logo from '../assets/logo.svg';
+import Logo from 'components/logo';
 
 const MainExample = () => (
   <Viewport>
-    <img role="presentation" src={logo} />
+    <Logo />
     <Headline>
       Themable, Native, Atomic, Reusable, Universal and easily extensible UI-Toolkit
     </Headline>

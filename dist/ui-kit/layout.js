@@ -32,7 +32,7 @@
       _templateObject2 = _taggedTemplateLiteral(['\n  background: white;\n  color: ', ';\n  font-size: ', ';\n  font-weight: 300;\n\n  ', '\n'], ['\n  background: white;\n  color: ', ';\n  font-size: ', ';\n  font-weight: 300;\n\n  ', '\n']),
       _templateObject3 = _taggedTemplateLiteral(['\n  overflow: hidden;\n  font-family: ', ';\n  -webkit-overflow-scrolling: touch;\n  height: ', ';\n  width: ', ';\n  overflow-y: auto;\n  ', '\n'], ['\n  overflow: hidden;\n  font-family: ', ';\n  -webkit-overflow-scrolling: touch;\n  height: ', ';\n  width: ', ';\n  overflow-y: auto;\n  ', '\n']),
       _templateObject4 = _taggedTemplateLiteral(['\n  position: absolute;\n  top: ', ';\n  right: 0;\n  left: 0;\n  bottom: 0;\n  font-size: ', ';\n\n  ', '\n'], ['\n  position: absolute;\n  top: ', ';\n  right: 0;\n  left: 0;\n  bottom: 0;\n  font-size: ', ';\n\n  ', '\n']),
-      _templateObject5 = _taggedTemplateLiteral(['\n  font-family: Avenir Next;\n  font-weight: 400;\n  height: 100vh;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  display: flex;\n  font-size: 3em;\n  background-color: ', ';\n  color: ', ';\n'], ['\n  font-family: Avenir Next;\n  font-weight: 400;\n  height: 100vh;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  display: flex;\n  font-size: 3em;\n  background-color: ', ';\n  color: ', ';\n']),
+      _templateObject5 = _taggedTemplateLiteral(['\n  font-weight: 400;\n  flex: 1;\n  height: ', ';\n  width: ', ';\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  display: flex;\n  font-size: 3em;\n  background-color: ', ';\n  color: ', ';\n'], ['\n  font-weight: 400;\n  flex: 1;\n  height: ', ';\n  width: ', ';\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  text-align: center;\n  display: flex;\n  font-size: 3em;\n  background-color: ', ';\n  color: ', ';\n']),
       _templateObject6 = _taggedTemplateLiteral(['\n  *, & {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n  }\n'], ['\n  *, & {\n    box-sizing: border-box;\n    margin: 0;\n    padding: 0;\n  }\n']);
 
   function _taggedTemplateLiteral(strings, raw) {
@@ -64,7 +64,13 @@
     return props.bg && '\n    background-color: ' + props.bg + ';\n  ';
   });
 
-  var Viewport = exports.Viewport = _styledComponents2.default.section(_templateObject5, color.black, color.white);
+  var Viewport = exports.Viewport = _styledComponents2.default.section(_templateObject5, function (props) {
+    return props.height ? props.height : '100%';
+  }, function (props) {
+    return props.width ? props.width : '100%';
+  }, function (props) {
+    return props.bg ? props.bg : color.black;
+  }, color.white);
 
   var App = exports.App = _styledComponents2.default.div(_templateObject6);
 });
