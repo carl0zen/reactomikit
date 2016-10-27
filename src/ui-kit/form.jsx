@@ -46,3 +46,7 @@ export const Input = styled.input`
 export const Textarea = styled.textarea`
   ${props => textInput(props)}
 `;
+
+export const Form = styled.form`
+
+`;
