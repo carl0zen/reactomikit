@@ -1,6 +1,6 @@
 {
   "name": "reactomikit",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Atomic UI React Toolkit",
   "main": "index.js",
   "scripts": {
