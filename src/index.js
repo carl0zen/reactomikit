@@ -3,12 +3,11 @@
 // you can find tests in __test__ folder
 
 import React from 'react';
-import { Button } from './ui-kit/base';
+
+import UIKit from './examples';
 
 const App = () => (
-  <div className="my-component">
-    <Button>Voy</Button>
-  </div>
+  <UIKit />
 )
 
 export default App;

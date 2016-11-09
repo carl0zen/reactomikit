@@ -22,9 +22,24 @@ export const Inline = styled.div`
 export const Column = styled(Inline)`
   flex-direction: column;
   justify-content: initial;
+  
   &:last-child {
     margin: 0;
   }
+
+  ${props => props.spaced && `
+    > * {
+      margin: 10px 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  `}
 
   h3 {
     flex-grow: 0;

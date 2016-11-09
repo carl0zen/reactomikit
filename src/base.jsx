@@ -32,7 +32,7 @@ export const Menu = styled.nav`
 `;
 
 export const Button = styled.button`
-  border: 1px solid white;
+  border: 1px solid transparent;
   font-family: inherit;
   font-size: 12px;
   cursor: pointer;
