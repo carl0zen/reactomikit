@@ -11,7 +11,7 @@ export const headingsSharedProperties = `
 
 export const H1 = styled.h1`
   ${headingsSharedProperties}
-  font-size: 3.5em;
+  font-size: 3.5rem;
   color: black;
   font-weight: 100;
 `;
@@ -19,7 +19,7 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   ${headingsSharedProperties}
   font-size: 2em;
-  line-height: 2.5em;
+  line-height: 2.5rem;
   font-weight: 400;
   position: relative;
   margin-top: 0.5em;
@@ -28,13 +28,13 @@ export const H2 = styled.h2`
 
 export const H3 = styled.h3`
   ${headingsSharedProperties}
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 100;
 `;
 
 export const H4 = styled.h4`
   ${headingsSharedProperties}
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 500;
 `;
 
@@ -90,4 +90,8 @@ export const Footnote = styled.small`
 export const Powered = styled.small`
   font-size: 0.7em;
   opacity: 0.8;
+`;
+
+export const ErrorMessage = styled(Footnote)`
+  color: ${color.alert};
 `;
