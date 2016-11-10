@@ -43,7 +43,9 @@ const theme = {
     background: '#111',
   },
   button: {
-    roundedSize: '40px',
+    rounded: {
+      size: '40px'
+    }
   },
 };
 
