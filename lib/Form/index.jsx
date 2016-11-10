@@ -1,7 +1,7 @@
-import styled from 'styled-components';
-import theme from './theme';
+import styled from 'styled-components'
+import theme from '../Theme'
 
-const { color, font } = theme;
+const { color, font } = theme
 
 const textInput = props => `
   color: ${props.error ? color.white : color.base};
@@ -19,34 +19,34 @@ const textInput = props => `
   &:focus {
     background-color: #FFF;
     box-shadow: 0 0 4px rgba(0,0,0,0.1);
-    color: ${color.base}
-}
+    color: ${color.base};
+  }
 
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     color: ${props.error ? color.white : color.base};
-}
+  }
 
   &::-moz-placeholder { /* Firefox 19+ */
     color: ${props.error ? color.white : color.base};
-}
+  }
 
   &:-ms-input-placeholder { /* IE 10+ */
     color: ${props.error ? color.white : color.base};
-}
+  }
 
   &:-moz-placeholder { /* Firefox 18- */
     color: ${props.error ? color.white : color.base};
-}
-`;
+  }
+`
 
 export const Input = styled.input`
   ${props => textInput(props)}
-`;
+`
 
 export const Textarea = styled.textarea`
   ${props => textInput(props)}
-`;
+`
 
 export const Form = styled.form`
 
-`;
+`
