@@ -4,22 +4,33 @@ import theme from './theme';
 const { color, font } = theme;
 
 const textInput = props => `
-  color: ${props.error ? color.white : color.base};
-  background-color: ${props.error ? color.alert : color.white};
+  color: ${props.theme.form.color || color.base };
+  background-color: ${props.theme.form.backgroundColor || color.white};
+  border: ${props.theme.border || `1px solid ${color.border}`};
+
+  ${props.error &&`
+    color: ${props.theme.form.error.color || color.white};
+    background-color: ${props.theme.form.error.backgroundColor || color.alert };
+    border: ${props.theme.form.error.border || `1px solid ${color.alert}`};
+    `
+  }
+
+  ${props.disabled &&`
+    opacity: 0.3;
+  `}
+
   outline: none;
-  font-size: ${font.base};
-  border: 1px solid ${props.error ? color.alert : color.border};
-  border-radius: 3px;
-  opacity: ${props.disabled ? 0.3 : 1};
+  font-size: ${props.theme.form.fontSize || font.base};
+  border-radius: ${props.theme.form.borderRadius || '3px'};
   padding: 15px;
   transition:
-    background-color 300ms ease,
-    color 300ms ease;
+    background-color ${props.theme.transition || '300ms ease'},
+    color ${props.theme.transition || '300ms ease'};
 
   &:focus {
     background-color: #FFF;
-    box-shadow: 0 0 4px rgba(0,0,0,0.1);
-    color: ${color.base}
+    box-shadow: ${props.theme.form.focus.boxShadow || '0 0 4px rgba(0,0,0,0.1)'};
+    color: ${props.theme.form.focus.color || color.base}
 }
 
   &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
