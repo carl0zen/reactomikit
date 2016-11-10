@@ -77,7 +77,7 @@ injectGlobal`
 
 const App = (props) => {
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={props.theme || theme}>
       {props.children}
     </ThemeProvider>
   );
