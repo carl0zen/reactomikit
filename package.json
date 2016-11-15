@@ -1,11 +1,11 @@
 {
   "name": "reactomikit",
-  "version": "0.0.8",
+  "version": "0.0.12",
   "description": "Atomic UI React Toolkit",
   "main": "./dist/index.js",
   "scripts": {
     "start": "next",
-    "prebuild": "rimraf ./dist/",
+    "prebuild": "rimraf ./dist",
     "build": "babel --plugins 'transform-es2015-modules-umd' --copy-files ./lib --ignore __tests__ --out-dir ./dist",
     "prepublish": "npm run build",
     "lint": "eslint ./lib",
@@ -36,7 +36,8 @@
     "styled-component",
     "styled",
     "component",
-    "design"
+    "design",
+    "kit"
   ],
   "options": {
     "mocha": "--require ./scripts/mocha_runner ./__tests__/**/*.js"
