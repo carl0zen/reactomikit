@@ -9,7 +9,6 @@
     "build-examples": "babel --plugins 'transform-es2015-modules-umd' --copy-files ./examples --ignore __tests__ --out-dir ./examples2",
     "prebuild": "rimraf ./dist",
     "build": "babel --copy-files ./lib --ignore index.tpl.js --out-dir ./dist && cp ./lib/index.tpl.js ./dist",
-    "prepublish": "npm run build",
     "lint": "eslint ./lib",
     "lintfix": "eslint ./lib --fix",
     "testonly": "mocha $npm_package_options_mocha",
