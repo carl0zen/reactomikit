@@ -9,3 +9,6 @@ node_modules
 *.tgz
 build
 dist
+.next
+pages/_components
+pages/index.js
