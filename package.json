@@ -21,7 +21,9 @@
   },
   "files": [
     "dist",
-    "../README.md"
+    "pages",
+    "ui",
+    "README.md"
   ],
   "preferGlobal": true,
   "authors": [
