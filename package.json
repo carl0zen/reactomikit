@@ -1,6 +1,6 @@
 {
   "name": "reactomikit",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Atomic UI React Toolkit",
   "main": "./dist/index.js",
   "scripts": {
@@ -20,7 +20,9 @@
   },
   "files": [
     "dist",
-    "../README.md"
+    "pages",
+    "ui",
+    "README.md"
   ],
   "preferGlobal": true,
   "authors": [
