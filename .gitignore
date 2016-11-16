@@ -10,4 +10,5 @@ node_modules
 build
 dist
 .next
-pages/*
+pages/components
+pages/index.js
