@@ -1,19 +1,29 @@
 {
   "name": "reactomikit",
-  "version": "0.0.12",
+  "version": "0.1.0",
   "description": "Atomic UI React Toolkit",
   "main": "./dist/index.js",
   "scripts": {
-    "start": "next",
+    "start": "babel-node ./lib/index.js",
+    "build:start": "npm run build && ./dist/index.js",
+    "build-examples": "babel --plugins 'transform-es2015-modules-umd' --copy-files ./examples --ignore __tests__ --out-dir ./examples2",
     "prebuild": "rimraf ./dist",
-    "build": "babel --plugins 'transform-es2015-modules-umd' --copy-files ./lib --ignore __tests__ --out-dir ./dist",
+    "build": "babel --copy-files ./lib --ignore index.tpl.js --out-dir ./dist && cp ./lib/index.tpl.js ./dist",
     "prepublish": "npm run build",
     "lint": "eslint ./lib",
     "lintfix": "eslint ./lib --fix",
     "testonly": "mocha $npm_package_options_mocha",
     "test": "npm run lint && npm run testonly",
-    "test-watch": "npm run testonly -- --watch --watch-extensions js"
+    "test:watch": "npm run testonly -- --watch --watch-extensions js"
   },
+  "bin": {
+    "uikit": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "../README.md"
+  ],
+  "preferGlobal": true,
   "authors": [
     "@carlosepp",
     "@sdelrio0"
@@ -52,6 +62,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-preset-stage-2": "^6.5.0",
     "babel-runtime": "^6.6.1",
+    "babel-watch": "^2.0.3",
     "chai": "^3.5.0",
     "enzyme": "^2.2.0",
     "eslint": "^2.7.0",
@@ -59,7 +70,6 @@
     "eslint-plugin-react": "^4.2.3",
     "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
-    "next": "^1.1.1",
     "nodemon": "^1.9.1",
     "react": "^15.0.0",
     "react-addons-test-utils": "^15.0.0",
@@ -72,6 +82,9 @@
     "react-dom": "~0.14.8 || ^15.0.0"
   },
   "dependencies": {
+    "bluebird": "^3.4.6",
+    "minimist": "^1.2.0",
+    "next": "^1.1.1",
     "styled-components": "^1.0.9"
   }
 }
