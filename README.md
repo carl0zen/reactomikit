@@ -47,3 +47,4 @@ Only components containing the `@uikit` variable will be considered.
 * Bugfixing when running the standalone `uikit` command.
 * Include propTypes analysis
 * Tests
+* Standardize (example) components and helpers 
