@@ -54,7 +54,6 @@
     "kit"
   ],
   "devDependencies": {
-    "chai": "^3.5.0",
     "babel-cli": "^6.6.4",
     "babel-core": "^6.7.4",
     "babel-eslint": "^6.0.2",
@@ -66,12 +65,14 @@
     "babel-preset-stage-2": "^6.5.0",
     "babel-runtime": "^6.6.1",
     "babel-watch": "^2.0.3",
-    "minimist": "^1.2.0",
+    "chai": "^3.5.0",
+    "draft-js": "^0.9.1",
     "enzyme": "^2.2.0",
     "eslint": "^2.7.0",
     "eslint-plugin-babel": "^3.1.0",
     "eslint-plugin-react": "^4.2.3",
     "jsdom": "^8.1.0",
+    "minimist": "^1.2.0",
     "mocha": "^2.4.5",
     "nodemon": "^1.9.1",
     "react": "^15.0.0",
