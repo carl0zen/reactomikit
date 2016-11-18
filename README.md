@@ -44,4 +44,5 @@ Only components containing the `@uikit` variable will be considered.
 
 
 ## TODO
-Bugfixing when running the standalone `uikit` command. 
+* Bugfixing when running the standalone `uikit` command.
+* Tests
