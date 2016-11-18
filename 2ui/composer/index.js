@@ -1,6 +1,6 @@
 import React from 'react'
 import Form from '../form'
-import { Button, Input } from '../core'
+import { Button, Input, Inline } from '../core'
 
 /**
  * @uikit Composer
@@ -9,13 +9,15 @@ import { Button, Input } from '../core'
  * @description
  * This is a more complex component.
  *
- * @category nested
+ * @category complex
  *
  */
 export default (props) => (
   <Form>
-    <Input />
-    <Input />
-    <Button value="Submit" />
+    <Inline>
+      <Input />
+      <Input />
+      <Button value="Submit" />
+    </Inline>
   </Form>
 )

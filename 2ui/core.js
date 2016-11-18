@@ -1,4 +1,24 @@
 import React from 'react'
+import styled from 'styled-components'
+
+const StyledButton = styled.button`
+  background-color: lightgreen;
+  border: 1px solid black;
+`
+
+const StyledInput = styled.input`
+  border: 1px solid black;
+`
+
+export const Padder = styled.div` 
+  padding: 0.5em;
+  display: inherit; 
+`
+
+export const Inline = styled.div`
+  display: inline; 
+`
+ 
 
 /**
  * @uikit Button
@@ -12,7 +32,9 @@ import React from 'react'
  *
  */
 export const Button = (props) => (
-  <button>{props.value || 'My Button'}</button>
+  <Padder>
+    <StyledButton>{props.value || 'My Button'}</StyledButton>
+  </Padder>
 )
 
 /**
@@ -27,7 +49,9 @@ export const Button = (props) => (
  *
  */
 export const Input = (props) => (
-  <input type="text" placeholder="My input"/>
+  <Padder>
+    <StyledInput type="text" placeholder="My input"/>
+  </Padder>
 )
 
 /**
@@ -38,17 +62,3 @@ export const Input = (props) => (
 export const helper = () => {
   
 }
-
-/**
- * @uikit Paper
- * @import Paper
- *
- * @description
- * some paper component dasdasdasd input asdasdas
- *
- * @category core
- *
- */
-export const Paper = (props) => (
-  <div style={{border: '1px solid black', padding: '0.5em'}}>hola</div>
-)
