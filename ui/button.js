@@ -70,7 +70,8 @@ export const Button = styled.button`
 
 Button.defaultProps = {children: 'Button'}
 
-
+/**
+ */
 export const IconButton = styled.a`
   padding: 1em;
   display: block;

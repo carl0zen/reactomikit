@@ -6,16 +6,23 @@ const { color } = theme;
 
 // Spacing
 
-/*
+/**
  * @uikit Padder
  * @import Padder
  *
- * @category helpers
+ * @category Helpers
  */
 export const Padder = styled.section`
   padding: ${props => props.amount ? props.amount : '2em'};
 `;
+Padder.defaultProps = { children: 'Lorem ipsum' }
 
+/**
+ * @uikit Spacer
+ * @import Spacer
+ *
+ * @category Helpers
+ */
 export const Spacer = styled.div`
   > * {
     margin: ${props => props.amount ? props.amount : '1em'};
@@ -27,8 +34,15 @@ export const Spacer = styled.div`
     }
   }
 `;
+Spacer.defaultProps = { children: [React.createElement('div', { children: 'Item 1', key: '1'}), React.createElement('div', { children: 'Item 2', key: '2'}), React.createElement('div', { children: '...', key: '3'})] }
 
 // Flex
+/**
+ * @uikit Flex
+ * @import Flex
+ *
+ * @category Helpers
+ */
 export const Flex = styled.div`
   display: flex;
   ${props => props.wrap && 'flex-wrap: wrap;'}
@@ -36,7 +50,14 @@ export const Flex = styled.div`
   ${props => props.rowReverse && 'flex-direction: row-reverse;'}
   ${props => props.spaceBetween && 'justify-content: space-between;'}
 `
+Flex.defaultProps = { children: [React.createElement('div', { children: 'Item 1', key: '1'}), React.createElement('div', { children: 'Item 2', key: '2'}), React.createElement('div', { children: '...', key: '3'})] }
 
+/**
+ * @uikit Inline
+ * @import Inline
+ *
+ * @category Helpers
+ */
 export const Inline = styled.div`
   ${props => borderProps(props)}
   ${props => marginProps(props)}
@@ -48,6 +69,7 @@ export const Inline = styled.div`
   flex-direction: row;
   justify-content: space-between;
 `;
+Inline.defaultProps = { children: [React.createElement('div', { children: 'Item 1', key: '1'}), React.createElement('div', { children: 'Item 2', key: '2'}), React.createElement('div', { children: '...', key: '3'})] }
 
 /**
  * @uikit Column
@@ -77,7 +99,7 @@ export const Column = styled(Inline)`
     flex-grow: 0;
   }
 `;
-Column.defaultProps = { children: React.createElement('div', { children: [React.createElement('div', { children: 'Item 1'}), React.createElement('div', { children: 'Item 2'}), React.createElement('div', { children: '...'})]}) }
+Column.defaultProps = { children: [React.createElement('div', { children: 'Item 1', key: '1'}), React.createElement('div', { children: 'Item 2', key: '2'}), React.createElement('div', { children: '...', key: '3'})] }
 
 // Alignment
 
@@ -95,10 +117,23 @@ export const Center = styled.div`
 
 Center.defaultProps = { children: 'I\'m  centered' };
 
+/**
+ * @uikit Relative
+ * @import Relative
+ *
+ * @category Helpers
+ */
 export const Relative = styled.div`
   position: relative;
 `;
+Relative.defaultProps = { children: 'Lorem ipsum' }
 
+/**
+ * @uikit Absolute
+ * @import Absolute
+ *
+ * @category Helpers
+ */
 export const Absolute = styled.div`
   position: absolute;
   ${props => props.right && `right: ${props.padded? '1em': '0'};` }
@@ -106,11 +141,22 @@ export const Absolute = styled.div`
   ${props => props.top && `top: ${props.padded? '1em': '0'}` };
   ${props => props.bottom && `bottom: ${props.padded? '1em': '0'}` };
 `;
+Absolute.defaultProps = { children: 'Lorem ipsum' }
 
+/**
+ * @uikit HighlightBorders
+ * @import HighlightBorders
+ *
+ * @category Helpers
+ */
 export const HighlightBorders = styled.div`
   border: 3px solid ${color.alert};
 `;
+HighlightBorders.defaultProps = { children: 'Lorem ipsum' }
 
+/**
+ *
+ */
 
 // Media Queries:
 

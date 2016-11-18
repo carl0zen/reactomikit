@@ -78,16 +78,20 @@ export const Select = styled.select`
   height: 50px;
   cursor: pointer;
 `
-
+/**
+ */
 export const Form = styled.form`
   width: auto;
   position: relative;
 `;
 
+/**
+ */
 const placeholder = (props) => `
   color: ${props.error ? color.white : color.base};
 `
-
+/**
+ */
 export const Placeholder = styled.div`
   ${props => placeholder(props)};
   margin: 0 1em;
