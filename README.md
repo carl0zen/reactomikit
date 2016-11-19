@@ -1,4 +1,4 @@
-WIP DON'T USE: reactomikit
+WIP DON'T USE YET: reactomikit
 ================
 
 Access on the browser an auto-generated kitchen sink of your React components!
