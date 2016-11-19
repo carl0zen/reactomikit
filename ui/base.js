@@ -78,7 +78,7 @@ export const Logo = styled.img`
   width: 130px;
 `;
 
-Logo.defaultProps = { src: 'http://cdn.uconnectlabs.com/wp-content/uploads/sites/4/2014/10/alpha-sights1-logo.jpg' }
+Logo.defaultProps = { src: 'http://static3.fjcdn.com/thumbnails/comments/Nothing+weird+about+it+at+all+_4444079ce83c81bff1ffea1f793c8fba.jpg' }
 
 
 /**
