@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import { parse, parseFile, listDirRecursive, buildUiKitAST } from '../lib/jsDocs'
+import { parse, parseFile, listDirRecursive, buildUiKitAST } from '../lib/parser'
 import path from 'path'
 
 describe('JsDoc Parser', function() {
