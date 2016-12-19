@@ -1,40 +1,42 @@
-import React from 'react'
-import styled from "styled-components"
-import theme from './theme';
-import {topbar} from "./topbar";
-import {borderProps} from './helpers';
+import styled from "styled-components";
+import {
+  theme,
+  borderProps,
+  sizeProps,
+  backgroundColorProps
+} from "./index";
 
-const { color, font } = theme;
+const { color, font, topbar, gutter } = theme;
 
-/**
- * @uikit Panel
- * @import Panel
- *
- * @description A panel
- * @category Layout
- */
 export const Panel = styled.article`
   background: white;
-  color: ${color.black}; 
+  color: ${color.black};
   font-size: ${font.base};
   font-weight: 300;
-  padding: 0.5em;
-  ${props => !props.noborder && `border: 1px solid ${color.border}` };
-  width: ${props => props.width ? props.width : '100%'};
+  ${props => !props.noborder && `border: 1px solid ${color.border}`};
+  width: ${props => props.width ? props.width : "100%"};
   ${props => borderProps(props)}
+  transition: 
+    transform 300ms ease-in-out,
+    box-shadow 300ms ease-in-out,
+    margin 300ms ease-in-out;
+  box-shadow: 0 3px 3px rgba(0,0,0,0.1);
+
   ${props => props.dark && `
     color: ${color.white};
     background-color: ${color.black};
   `}
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 3px rgba(0,0,0,0.1);
+  }
 `;
-Panel.defaultProps = { children: 'Panel contents' }
 
 export const ScrollView = styled.section`
   overflow: hidden;
   font-family: ${font.family};
   -webkit-overflow-scrolling: touch;
-  height: ${props => props.height ? props.height : 'auto'};
-  width: ${props => props.width ? props.width : '100%'};
   overflow-y: auto;
   ${props => props.horizontal && `
     white-space: nowrap;
@@ -42,39 +44,39 @@ export const ScrollView = styled.section`
     overflow-y: hidden;
     `
   }
+  ${props => sizeProps(props)}
 `;
 
-export const View = styled(ScrollView)`
+export const MainContent = styled(ScrollView)`
   position: absolute;
   top: ${props => props.nobar ? 0 : topbar.height};
   right: 0;
   left: 0;
   bottom: 0;
   font-size: ${font.base};
+  padding: ${gutter} 3em;
+
   ${props => props.bg && `
     background-color: ${props.bg};
   `}
 `;
 
-export const Viewport = styled.section`
+export const Slide = styled.section`
+  ${backgroundColorProps}
   font-weight: 400;
   flex: 1;
-  height: ${props => props.height ? props.height : '100%'};
-  width: ${props => props.width ? props.width : '100%'};
+  height: ${props => props.height ? props.height : "100%"};
+  width: ${props => props.width ? props.width : "100%"};
   justify-content: center;
   flex-direction: column;
   align-items: center;
   text-align: center;
   display: flex;
   font-size: 3em;
-  background-color: ${props => props.bg ? props.bg : color.black};
   color: ${color.white};
 `;
 
 export const App = styled.div`
-  font-family: 'Helvetica Neue';
-  font-size: 16px;
-
   *, & {
     box-sizing: border-box;
   }

@@ -2,7 +2,7 @@
   "name": "reactomikit",
   "version": "0.1.4",
   "description": "Atomic UI React Toolkit",
-  "main": "./dist/index.js",
+  "main": "./ui/index.jsx",
   "scripts": {
     "next": "next",
     "start": "babel-watch ./lib/index.js",
